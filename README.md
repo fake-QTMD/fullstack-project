@@ -36,6 +36,8 @@ node backend\server.js
 
 数据库连接配置在 `backend/.env`，已被 `.gitignore` 排除。
 
+> 本机开发环境 MySQL 的 root 密码为 `root`；如果在新机器上按指导书使用 root / 123456，请同步修改 `backend/.env` 的 `DB_PASSWORD`，数据库测试页默认密码也要相应调整。
+
 完整建库、建表和测试数据 SQL 见：
 
 ```text
