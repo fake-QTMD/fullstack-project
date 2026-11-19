@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 姓名：吴钊燊 | 学号：24001010208 | 时间：2026-11-19 | 大模型：DeepSeek -->
+    <meta name="author" content="吴钊燊">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>班级成绩 - 前端开发2501班学习管理平台</title>
+    <link rel="stylesheet" href="css/Cheney_style.css">
+</head>
+<body>
+    <header class="Cheney_topbar">
+        <div class="Cheney_topbar-inner">
+            <a class="Cheney_brand" href="index.html"><span class="Cheney_brand-dot"></span>前端开发2501班</a>
+            <nav class="Cheney_nav">
+                <a href="index.html">首页</a>
+                <a href="scores.html">班级成绩</a>
+                <a href="news.html">科技新闻</a>
+                <a href="gallery.html">图文列表</a>
+                <a href="database.html">数据库测试</a>
+            </nav>
+            <span class="Cheney_topbar-author">208wzs</span>
+        </div>
+    </header>
+
+    <main class="Cheney_shell Cheney_page">
+        <div class="Cheney_page-head">
+            <span class="Cheney_page-kicker">API / CLASS SCORES</span>
+            <h1 class="Cheney_page-title">班级成绩</h1>
+            <p class="Cheney_page-desc" id="Cheney_classInfoText">
+                正在读取班级信息与学生成绩……
+            </p>
+        </div>
+
+        <div class="Cheney_stat-grid">
+            <div class="Cheney_stat-card">
+                <span>班级人数</span>
+                <strong id="Cheney_studentCount">--</strong>
+            </div>
+            <div class="Cheney_stat-card">
+                <span>班级平均分</span>
+                <strong id="Cheney_classAverage">--</strong>
+            </div>
+            <div class="Cheney_stat-card">
+                <span>最高总分</span>
+                <strong id="Cheney_maxTotal">--</strong>
+            </div>
+            <div class="Cheney_stat-card">
+                <span>课程门数</span>
+                <strong id="Cheney_courseCount">3</strong>
+            </div>
+        </div>
+
+        <section class="Cheney_panel">
+            <div class="Cheney_panel-head">
+                <h2>学生成绩明细</h2>
+                <a class="Cheney_api-link" href="/api/class" target="_blank">GET http://localhost:8325/api/class</a>
+            </div>
+            <div class="Cheney_table-wrap">
+                <table class="Cheney_table">
+                    <thead>
+                        <tr>
+                            <th>排名</th>
+                            <th>姓名</th>
+                            <th>学号</th>
+                            <th>性别</th>
+                            <th>HTML</th>
+                            <th>CSS</th>
+                            <th>JavaScript</th>
+                            <th>总分</th>
+                            <th>平均分</th>
+                        </tr>
+                    </thead>
+                    <tbody id="Cheney_scoreBody">
+                        <tr>
+                            <td colspan="9">正在加载成绩数据……</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="Cheney_panel">
+            <div class="Cheney_panel-head">
+                <h2>接口原始数据</h2>
+                <span class="Cheney_api-link">console.log 已同步输出</span>
+            </div>
+            <pre class="Cheney_raw-json" id="Cheney_scoresRaw">正在读取 /api/class……</pre>
+        </section>
+
+        <p class="Cheney_footer">吴钊燊 · 24001010208 · 班级成绩页</p>
+    </main>
+
+    <script src="js/Cheney_scores.js"></script>
+</body>
+</html>

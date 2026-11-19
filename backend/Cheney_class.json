@@ -1,0 +1,20 @@
+{
+  "classInfo": {
+    "className": "前端开发2501班",
+    "teacher": "陈莹羽",
+    "subject": "高级网页设计",
+    "year": "2026-2027"
+  },
+  "students": [
+    { "id": 1,  "name": "张小明", "no": "250101", "gender": "男", "scores": { "html": 92, "css": 88, "js": 85 } },
+    { "id": 2,  "name": "李小红", "no": "250102", "gender": "女", "scores": { "html": 95, "css": 93, "js": 90 } },
+    { "id": 3,  "name": "王大伟", "no": "250103", "gender": "男", "scores": { "html": 78, "css": 82, "js": 75 } },
+    { "id": 4,  "name": "赵小雪", "no": "250104", "gender": "女", "scores": { "html": 88, "css": 91, "js": 86 } },
+    { "id": 5,  "name": "刘洋",   "no": "250105", "gender": "男", "scores": { "html": 90, "css": 87, "js": 92 } },
+    { "id": 6,  "name": "陈思",   "no": "250106", "gender": "女", "scores": { "html": 85, "css": 80, "js": 78 } },
+    { "id": 7,  "name": "周涛",   "no": "250107", "gender": "男", "scores": { "html": 96, "css": 94, "js": 95 } },
+    { "id": 8,  "name": "吴敏",   "no": "250108", "gender": "女", "scores": { "html": 82, "css": 85, "js": 88 } },
+    { "id": 9,  "name": "郑浩",   "no": "250109", "gender": "男", "scores": { "html": 70, "css": 72, "js": 68 } },
+    { "id": 10, "name": "孙丽",   "no": "250110", "gender": "女", "scores": { "html": 91, "css": 89, "js": 93 } }
+  ]
+}

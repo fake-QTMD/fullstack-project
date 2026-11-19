@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 姓名：吴钊燊 | 学号：24001010208 | 时间：2026-11-19 | 大模型：DeepSeek -->
+    <meta name="author" content="吴钊燊">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据库测试 - 前端开发2501班学习管理平台</title>
+    <link rel="stylesheet" href="css/Cheney_style.css">
+</head>
+<body>
+    <header class="Cheney_topbar">
+        <div class="Cheney_topbar-inner">
+            <a class="Cheney_brand" href="index.html"><span class="Cheney_brand-dot"></span>前端开发2501班</a>
+            <nav class="Cheney_nav">
+                <a href="index.html">首页</a>
+                <a href="scores.html">班级成绩</a>
+                <a href="news.html">科技新闻</a>
+                <a href="gallery.html">图文列表</a>
+                <a href="database.html">数据库测试</a>
+            </nav>
+            <span class="Cheney_topbar-author">208wzs</span>
+        </div>
+    </header>
+
+    <main class="Cheney_shell Cheney_page">
+        <div class="Cheney_page-head">
+            <span class="Cheney_page-kicker">API / DATABASE TEST</span>
+            <h1 class="Cheney_page-title">数据库连接测试</h1>
+            <p class="Cheney_page-desc">输入 MySQL 用户名和密码，通过后端接口测试数据库连接。默认值为 root / root。</p>
+        </div>
+
+        <div class="Cheney_database-grid">
+            <section class="Cheney_panel">
+                <div class="Cheney_panel-head">
+                    <h2>连接参数</h2>
+                    <a class="Cheney_api-link" href="/api/database/test" target="_blank">POST /api/database/test</a>
+                </div>
+
+                <div class="Cheney_form">
+                    <div class="Cheney_field">
+                        <label for="Cheney_user">MySQL 用户名</label>
+                        <input class="Cheney_input" id="Cheney_user" type="text" value="root" autocomplete="off">
+                    </div>
+                    <div class="Cheney_field">
+                        <label for="Cheney_password">MySQL 密码</label>
+                        <input class="Cheney_input" id="Cheney_password" type="password" value="root" autocomplete="off">
+                    </div>
+                    <div>
+                        <button class="Cheney_button" id="Cheney_testButton" type="button">测试数据库连接</button>
+                    </div>
+                    <p class="Cheney_help">
+                        实际连接配置保存在 `backend/.env`，本页面仅用于课堂测试，不会把密码写入数据库。
+                    </p>
+                </div>
+            </section>
+
+            <section class="Cheney_panel">
+                <div class="Cheney_panel-head">
+                    <h2>连接结果</h2>
+                    <span class="Cheney_api-link">console 同步输出</span>
+                </div>
+                <div class="Cheney_result" id="Cheney_databaseResult">
+                    等待测试。点击左侧按钮后，这里显示成功或失败信息。
+                </div>
+            </section>
+        </div>
+
+        <section class="Cheney_panel">
+            <div class="Cheney_panel-head">
+                <h2>接口返回的原始数据</h2>
+                <span class="Cheney_api-link">统一 JSON：code / msg / data</span>
+            </div>
+            <pre class="Cheney_raw-json" id="Cheney_databaseRaw">尚未发起请求。</pre>
+        </section>
+
+        <p class="Cheney_footer">吴钊燊 · 24001010208 · 数据库连接测试页</p>
+    </main>
+
+    <script src="js/Cheney_database.js"></script>
+</body>
+</html>
