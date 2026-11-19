@@ -99,3 +99,9 @@ fullstack_project/
 ```json
 { "code": 0, "msg": "success", "data": {} }
 ```
+
+## 运行截图
+
+![首页](docs/screenshots/01-index.png)
+
+![班级成绩](docs/screenshots/02-scores.png)
