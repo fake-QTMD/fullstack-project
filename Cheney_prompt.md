@@ -17,3 +17,11 @@
 7. 使用 `chenyingyu.json` 中的班级、教师和学生成绩作为初始数据。
 
 **大模型：** DeepSeek
+
+## 2026-11-19 15:00 | 创建 GitHub 提交技能并尝试推送
+
+**提示词摘要：**
+
+创建 `github-push` 技能：将当前项目提交 commit 并 push 到用户自己的 GitHub 仓库，使用已配置的 SSH 公钥；示例地址 `Chen-Yingyu/cheney` 仅用于说明格式，必须替换为用户自己的仓库地址。
+
+**大模型：** DeepSeek
