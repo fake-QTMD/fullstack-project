@@ -32,6 +32,16 @@ cd D:\wx\fullstack_project
 node backend\server.js
 ```
 
+> 不要直接双击 `frontend` 目录下的 HTML 文件。直接打开时地址是 `file:///...`，页面里的 `fetch('/api/...')` 会变成请求本地文件，从而出现 `Failed to fetch`。
+>
+> 必须通过 Express 服务访问：
+>
+> - 首页：`http://localhost:8325/`
+> - 新闻：`http://localhost:8325/news.html`
+> - 成绩：`http://localhost:8325/scores.html`
+> - 图文：`http://localhost:8325/gallery.html`
+> - 数据库测试：`http://localhost:8325/database.html`
+
 ## 数据库初始化
 
 数据库连接配置在 `backend/.env`，已被 `.gitignore` 排除。
