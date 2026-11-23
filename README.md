@@ -26,11 +26,11 @@
 2. 在项目根目录双击 `start.bat`。
 3. 浏览器访问 `http://localhost:8325`。
 
-也可以手动启动：
+也可以手动启动（本机 Node 不在 PATH 时使用完整路径）：
 
 ```powershell
 cd D:\wx\fullstack_project
-node backend\server.js
+& "C:\Program Files\Huawei\DevEco Studio\tools\node\node.exe" backend\server.js
 ```
 
 > 不要直接双击 `frontend` 目录下的 HTML 文件。直接打开时地址是 `file:///...`，页面里的 `fetch('/api/...')` 会变成请求本地文件，从而出现 `Failed to fetch`。
