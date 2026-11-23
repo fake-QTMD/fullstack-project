@@ -37,7 +37,7 @@
   "data": {
     "Cheney_classInfo": {
       "Cheney_id": 1,
-      "Cheney_class_name": "前端开发2501班",
+      "Cheney_class_name": "前端开发24002班",
       "Cheney_teacher": "陈莹羽",
       "Cheney_subject": "高级网页设计",
       "Cheney_year": "2026-2027"

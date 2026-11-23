@@ -31,7 +31,7 @@ Cheney_app.use((Cheney_error, req, res, next) => {
 const Cheney_port = Number(process.env.PORT || 8325);
 Cheney_app.listen(Cheney_port, () => {
     console.log('==========================================');
-    console.log('前端开发2501班学习管理平台');
+    console.log('前端开发24002班学习管理平台');
     console.log('作者：吴钊燊 24001010208');
     console.log('访问：http://localhost:' + Cheney_port);
     console.log('API ：http://localhost:' + Cheney_port + '/api/health');

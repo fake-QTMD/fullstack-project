@@ -25,3 +25,12 @@
 创建 `github-push` 技能：将当前项目提交 commit 并 push 到用户自己的 GitHub 仓库，使用已配置的 SSH 公钥；示例地址 `Chen-Yingyu/cheney` 仅用于说明格式，必须替换为用户自己的仓库地址。
 
 **大模型：** DeepSeek
+
+## 2026-11-23 14:10 | 班级名称调整并推送 GitHub
+
+**提示词摘要：**
+
+将项目班级名称从“前端开发2501班”统一改为“前端开发24002班”，同步修改前端页面、README、启动脚本、数据库初始化 SQL 和接口文档；提交本地 Git，并推送到用户自己的仓库 `git@github.com:fake-QTMD/fullstack-project.git`。
+
+**大模型：** DeepSeek
+

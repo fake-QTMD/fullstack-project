@@ -1,5 +1,5 @@
 -- 姓名：吴钊燊 | 学号：24001010208 | 时间：2026-11-19 | 大模型：DeepSeek
--- 前端开发2501班学习管理平台数据库初始化脚本
+-- 前端开发24002班学习管理平台数据库初始化脚本
 
 CREATE DATABASE IF NOT EXISTS cheney_fullstack
   DEFAULT CHARACTER SET utf8mb4
@@ -51,7 +51,7 @@ CREATE TABLE Cheney_gallery (
 INSERT INTO Cheney_class
   (Cheney_class_name, Cheney_teacher, Cheney_subject, Cheney_year)
 VALUES
-  ('前端开发2501班', '陈莹羽', '高级网页设计', '2026-2027'),
+  ('前端开发24002班', '陈莹羽', '高级网页设计', '2026-2027'),
   ('前端开发2502班', '陈莹羽', '高级网页设计', '2026-2027'),
   ('前端开发2503班', '陈莹羽', '高级网页设计', '2026-2027'),
   ('前端开发2504班', '陈莹羽', '高级网页设计', '2026-2027'),
