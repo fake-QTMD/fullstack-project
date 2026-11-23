@@ -278,7 +278,7 @@ input {
 /* 首页入口卡片 */
 .Cheney_home-links {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     gap: 14px;
     margin: 22px 0 54px;
 }
@@ -729,3 +729,232 @@ input {
         padding-top: 24px;
     }
 }
+
+/* AI 聊天页 */
+.Cheney_chat-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 290px;
+    gap: 18px;
+    align-items: start;
+}
+
+.Cheney_chat-main {
+    display: flex;
+    flex-direction: column;
+    min-height: 640px;
+}
+
+.Cheney_chat-messages {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 14px;
+    min-height: 400px;
+    max-height: 520px;
+    padding: 8px 4px 18px;
+    overflow-y: auto;
+}
+
+.Cheney_chat-empty {
+    padding: 28px 20px;
+    border: 1px dashed var(--Cheney_line);
+    border-radius: 12px;
+    color: var(--Cheney_muted);
+    background: rgba(3, 13, 24, 0.28);
+    font-size: 12px;
+    line-height: 1.9;
+    text-align: center;
+}
+
+.Cheney_chat-message {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    max-width: 88%;
+}
+
+.Cheney_chat-message.Cheney_message-user {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+.Cheney_chat-message.Cheney_message-assistant {
+    align-self: flex-start;
+}
+
+.Cheney_chat-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 30px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--Cheney_line);
+    border-radius: 9px;
+    color: var(--Cheney_accent);
+    background: rgba(56, 189, 248, 0.08);
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.Cheney_message-user .Cheney_chat-avatar {
+    color: #04101c;
+    background: var(--Cheney_accent);
+    border-color: var(--Cheney_accent);
+}
+
+.Cheney_chat-bubble {
+    padding: 11px 13px;
+    border: 1px solid var(--Cheney_line);
+    border-radius: 3px 12px 12px 12px;
+    color: #d8ebf7;
+    background: rgba(4, 16, 29, 0.7);
+    font-size: 13px;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.Cheney_message-user .Cheney_chat-bubble {
+    border-color: rgba(56, 189, 248, 0.4);
+    border-radius: 12px 3px 12px 12px;
+    color: #062033;
+    background: #bae6fd;
+}
+
+.Cheney_chat-role {
+    display: block;
+    margin-bottom: 4px;
+    color: #6f8ea6;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.Cheney_message-user .Cheney_chat-role {
+    color: #2b617d;
+    text-align: right;
+}
+
+.Cheney_chat-composer {
+    padding-top: 14px;
+    border-top: 1px solid rgba(125, 211, 252, 0.1);
+}
+
+.Cheney_chat-input {
+    display: block;
+    width: 100%;
+    min-height: 78px;
+    max-height: 180px;
+    padding: 11px 12px;
+    resize: vertical;
+    border: 1px solid var(--Cheney_line);
+    border-radius: 10px;
+    color: #ffffff;
+    background: rgba(3, 13, 24, 0.55);
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 1.7;
+    outline: none;
+}
+
+.Cheney_chat-input:focus {
+    border-color: var(--Cheney_line-strong);
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.08);
+}
+
+.Cheney_chat-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.Cheney_chat-hint {
+    color: #6f8ea6;
+    font-size: 10px;
+}
+
+.Cheney_chat-status {
+    min-height: 20px;
+    margin-top: 8px;
+    color: var(--Cheney_muted);
+    font-size: 11px;
+}
+
+.Cheney_chat-status.Cheney_status-error {
+    color: var(--Cheney_red);
+}
+
+.Cheney_chat-status.Cheney_status-ok {
+    color: var(--Cheney_green);
+}
+
+.Cheney_chat-side {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.Cheney_chat-count {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    border: 1px solid var(--Cheney_line);
+    border-radius: 999px;
+    color: var(--Cheney_accent);
+    background: rgba(56, 189, 248, 0.06);
+    font-size: 11px;
+}
+
+.Cheney_chat-model {
+    color: var(--Cheney_accent);
+    font-family: Consolas, monospace;
+    font-size: 11px;
+    word-break: break-all;
+}
+
+.Cheney_chat-tip {
+    color: var(--Cheney_muted);
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.Cheney_chat-tip strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+@media (max-width: 980px) {
+    .Cheney_chat-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .Cheney_chat-side {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .Cheney_chat-main {
+        min-height: 560px;
+    }
+
+    .Cheney_chat-messages {
+        max-height: 420px;
+    }
+
+    .Cheney_chat-message {
+        max-width: 95%;
+    }
+
+    .Cheney_chat-side {
+        display: flex;
+    }
+}
+

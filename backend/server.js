@@ -10,6 +10,7 @@ const Cheney_dotenv = require('dotenv');
 Cheney_dotenv.config({ path: Cheney_path.join(__dirname, '.env') });
 
 const Cheney_apiRoutes = require('./routes/Cheney_apiRoutes');
+const Cheney_aiRoutes = require('./routes/Cheney_aiRoutes');
 const Cheney_app = Cheney_express();
 
 Cheney_app.use(Cheney_cors());
@@ -17,6 +18,7 @@ Cheney_app.use(Cheney_express.json());
 Cheney_app.use(Cheney_express.urlencoded({ extended: false }));
 
 Cheney_app.use('/api', Cheney_apiRoutes);
+Cheney_app.use('/api', Cheney_aiRoutes);
 Cheney_app.use(Cheney_express.static(Cheney_path.join(__dirname, '..', 'frontend')));
 
 Cheney_app.use((req, res) => {

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 姓名：吴钊燊 | 学号：24001010208 | 时间：2026-11-23 | 大模型：DeepSeek -->
+    <meta name="author" content="吴钊燊">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 聊天 - 前端开发24002班学习管理平台</title>
+    <link rel="stylesheet" href="css/Cheney_style.css">
+</head>
+<body>
+    <header class="Cheney_topbar">
+        <div class="Cheney_topbar-inner">
+            <a class="Cheney_brand" href="index.html"><span class="Cheney_brand-dot"></span>前端开发24002班</a>
+            <nav class="Cheney_nav">
+                <a href="index.html">首页</a>
+                <a href="scores.html">班级成绩</a>
+                <a href="news.html">科技新闻</a>
+                <a href="gallery.html">图文列表</a>
+                <a href="ai.html">AI 聊天</a>
+                <a href="database.html">数据库测试</a>
+            </nav>
+            <span class="Cheney_topbar-author">208wzs</span>
+        </div>
+    </header>
+
+    <main class="Cheney_shell Cheney_page">
+        <div class="Cheney_page-head">
+            <span class="Cheney_page-kicker">LLM / SILICONFLOW</span>
+            <h1 class="Cheney_page-title">AI 聊天</h1>
+            <p class="Cheney_page-desc">
+                通过后端代理调用 SiliconFlow 大模型。每次发送都会把完整对话历史一起发给模型，
+                因此可以进行多轮上下文对话；按 F12 可以在控制台查看发送和接收的完整数据。
+            </p>
+        </div>
+
+        <div class="Cheney_chat-layout">
+            <section class="Cheney_panel Cheney_chat-main">
+                <div class="Cheney_panel-head">
+                    <h2>对话窗口</h2>
+                    <span class="Cheney_api-link">POST /api/ai/chat</span>
+                </div>
+
+                <div class="Cheney_chat-messages" id="Cheney_chatMessages">
+                    <div class="Cheney_chat-empty" id="Cheney_chatEmpty">
+                        你好，我是 AI 助手。<br>
+                        可以问我项目代码、数据库、接口或页面布局的问题。<br>
+                        连续发送 3 轮以上，可以观察上下文是否被记住。
+                    </div>
+                </div>
+
+                <div class="Cheney_chat-composer">
+                    <textarea class="Cheney_chat-input" id="Cheney_chatInput" placeholder="输入问题，例如：请解释这个项目的 Express 接口结构……"></textarea>
+                    <div class="Cheney_chat-actions">
+                        <span class="Cheney_chat-hint">Enter 发送 · Shift + Enter 换行</span>
+                        <div>
+                            <button class="Cheney_button Cheney_button-ghost" id="Cheney_clearButton" type="button">清空对话</button>
+                            <button class="Cheney_button" id="Cheney_sendButton" type="button">发送</button>
+                        </div>
+                    </div>
+                    <div class="Cheney_chat-status" id="Cheney_chatStatus">等待输入……</div>
+                </div>
+            </section>
+
+            <aside class="Cheney_chat-side">
+                <section class="Cheney_panel">
+                    <div class="Cheney_panel-head">
+                        <h2>上下文</h2>
+                    </div>
+                    <span class="Cheney_chat-count" id="Cheney_contextCount">已进行 0 轮</span>
+                    <p class="Cheney_chat-tip" style="margin-top: 10px;">
+                        每发送一次，浏览器会把之前的 user / assistant 消息全部带上。
+                        至少完成 3 轮对话，才能看出模型是否记住了上下文。
+                    </p>
+                </section>
+
+                <section class="Cheney_panel">
+                    <div class="Cheney_panel-head">
+                        <h2>当前模型</h2>
+                    </div>
+                    <div class="Cheney_chat-model" id="Cheney_modelLabel">deepseek-ai/DeepSeek-V4.1-Flash</div>
+                    <p class="Cheney_chat-tip" style="margin-top: 8px;">
+                        模型由后端 `backend/.env` 中的 `SILICONFLOW_MODEL` 配置。
+                    </p>
+                </section>
+
+                <section class="Cheney_panel">
+                    <div class="Cheney_panel-head">
+                        <h2>控制台验证</h2>
+                    </div>
+                    <p class="Cheney_chat-tip">
+                        按 <strong>F12</strong> 打开开发者工具，切换到 Console。
+                        本页会输出：
+                        <br>① 发送给大模型的数据
+                        <br>② 从大模型接收到的数据
+                    </p>
+                    <span class="Cheney_api-link">/api/ai/chat</span>
+                </section>
+            </aside>
+        </div>
+
+        <p class="Cheney_footer">吴钊燊 · 24001010208 · AI 聊天页</p>
+    </main>
+
+    <script src="js/Cheney_ai.js"></script>
+</body>
+</html>

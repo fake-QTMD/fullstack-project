@@ -142,6 +142,59 @@
 }
 ```
 
+## 2026-11-23 AI 聊天接口
+
+### 6. SiliconFlow 多轮对话
+
+- 路径：`/api/ai/chat`
+- 方法：`POST`
+- 请求头：`Content-Type: application/json`
+- 请求参数示例：
+
+```json
+{
+  "Cheney_messages": [
+    { "role": "user", "content": "你好，请介绍一下这个项目" },
+    { "role": "assistant", "content": "这是一个全栈学习管理平台。" },
+    { "role": "user", "content": "它的后端用了什么技术？" }
+  ]
+}
+```
+
+- 成功响应示例：
+
+```json
+{
+  "code": 0,
+  "msg": "success",
+  "data": {
+    "Cheney_reply": "后端使用 Node.js + Express，通过 mysql2 连接 MySQL。",
+    "Cheney_model": "deepseek-ai/DeepSeek-V4.1-Flash",
+    "Cheney_usage": {
+      "prompt_tokens": 120,
+      "completion_tokens": 60,
+      "total_tokens": 180
+    }
+  }
+}
+```
+
+- 未配置 API Key 的响应示例：
+
+```json
+{
+  "code": 6001,
+  "msg": "未配置 SILICONFLOW_API_KEY，请在 backend/.env 中填写",
+  "data": null
+}
+```
+
+说明：
+
+- API Key 只保存在 `backend/.env`，不返回给前端；
+- 前端每次发送完整历史消息，实现至少 3 轮上下文；
+- 浏览器控制台会输出发送给大模型的数据和接收到的数据。
+
 ## 统一响应约定
 
 ```json
@@ -154,4 +207,4 @@
 
 - `code = 0`：成功
 - `code != 0`：失败
-- 修改时间：2026-11-19
+- 修改时间：2026-11-23
